@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0D0A1A;
+  --card-bg: #1A1530;
+  --primary: #7C3AED;
+  --accent: #F97316;
+}
+
+body {
+  background-color: var(--background);
+  color: #F1F5F9;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Betting card dark background */
+.casino-card-bg {
+  background: linear-gradient(135deg, #1A1530 0%, #221D40 100%);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* Felt texture overlay */
+.felt-texture {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(249, 115, 22, 0.05) 0%, transparent 60%);
+}
+
+/* Glow effect */
+.casino-glow {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), 0 0 40px rgba(124, 58, 237, 0.1);
+}
+
+/* Gold shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #F59E0B 25%, #FCD34D 50%, #F59E0B 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #7C3AED;
+  border-radius: 3px;
+}
