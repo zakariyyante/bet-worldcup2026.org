@@ -1,42 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0D0A1A;
-  --card-bg: #1A1530;
-  --primary: #7C3AED;
-  --accent: #F97316;
+  --background: #050B18;
+  --card-bg: #0F172A;
+  --primary: #22C55E; /* Vibrant Green from logo */
+  --accent: #EAB308;  /* Gold from logo */
+  --secondary: #3B82F6; /* Electric Blue from logo */
 }
 
 body {
   background-color: var(--background);
-  color: #F1F5F9;
+  color: #F8FAFC;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 /* Gold gradient text */
 .gold-text {
-  background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 50%, #D97706 100%);
+  background: linear-gradient(135deg, #EAB308 0%, #FDE047 50%, #CA8A04 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Betting card dark background */
-.casino-card-bg {
-  background: linear-gradient(135deg, #1A1530 0%, #221D40 100%);
-  border: 1px solid rgba(124, 58, 237, 0.2);
+/* Green gradient text */
+.green-text {
+  background: linear-gradient(135deg, #22C55E 0%, #4ADE80 50%, #16A34A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Felt texture overlay */
+/* Sports card dark background */
+.casino-card-bg {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Stadium texture overlay */
 .felt-texture {
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 60%),
-    radial-gradient(circle at 80% 50%, rgba(249, 115, 22, 0.05) 0%, transparent 60%);
+    radial-gradient(circle at 20% 50%, rgba(34, 197, 94, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 60%);
 }
 
 /* Glow effect */
 .casino-glow {
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), 0 0 40px rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2), 0 0 40px rgba(59, 130, 246, 0.1);
 }
 
 /* Gold shimmer animation */
@@ -46,12 +55,19 @@ body {
 }
 
 .gold-shimmer {
-  background: linear-gradient(90deg, #F59E0B 25%, #FCD34D 50%, #F59E0B 75%);
+  background: linear-gradient(90deg, #EAB308 25%, #FDE047 50%, #EAB308 75%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer 3s linear infinite;
+}
+
+/* Glass effect */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Scrollbar */

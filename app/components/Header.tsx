@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Brands", href: "/#brands" },
+  { label: "Disclosure", href: "/disclosure" },
   { label: "Guide", href: "/#guide" },
   { label: "About Us", href: "/#about" },
   { label: "Contact Us", href: "/contact" },
@@ -16,29 +16,29 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-purple-900/40 backdrop-blur-md"
-      style={{ background: "rgba(13,10,26,0.95)" }}>
+    <header className="sticky top-0 z-50 w-full border-b border-blue-900/40 backdrop-blur-md"
+      style={{ background: "rgba(5,11,24,0.95)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="bet-worldcup2026.org"
-              width={180}
-              height={45}
+              width={240}
+              height={60}
               priority
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-orange-400 transition-colors duration-200"
+                className="text-sm font-bold uppercase tracking-wider text-slate-300 hover:text-green-400 transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -46,17 +46,17 @@ export default function Header() {
           </nav>
 
           {/* CTA + Hamburger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <Link
               href="/#brands"
-              className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wide text-white transition-all duration-200 hover:scale-105"
-              style={{ background: "linear-gradient(135deg, #7C3AED, #F97316)" }}
+              className="hidden sm:inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-black uppercase tracking-widest text-white transition-all duration-200 hover:scale-105 casino-glow"
+              style={{ background: "linear-gradient(135deg, #22C55E, #16A34A)" }}
             >
               Top Offers
             </Link>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-purple-900/40 transition"
+              className="md:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-blue-900/40 transition"
               aria-label="Toggle menu"
             >
               {menuOpen ? (
@@ -75,14 +75,14 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-purple-900/40 bg-[#0D0A1A]">
-          <div className="px-4 py-3 space-y-1">
+        <div className="md:hidden border-t border-blue-900/40 bg-[#050B18]">
+          <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-orange-400 hover:bg-purple-900/20 transition"
+                className="block px-3 py-3 rounded-md text-base font-bold uppercase tracking-wider text-slate-300 hover:text-green-400 hover:bg-blue-900/20 transition"
               >
                 {link.label}
               </Link>
@@ -90,8 +90,8 @@ export default function Header() {
             <Link
               href="/#brands"
               onClick={() => setMenuOpen(false)}
-              className="block mt-2 px-4 py-2 rounded-lg text-sm font-bold uppercase text-white text-center"
-              style={{ background: "linear-gradient(135deg, #7C3AED, #F97316)" }}
+              className="block mt-4 px-4 py-3 rounded-lg text-sm font-black uppercase tracking-widest text-white text-center"
+              style={{ background: "linear-gradient(135deg, #22C55E, #16A34A)" }}
             >
               Top Offers
             </Link>

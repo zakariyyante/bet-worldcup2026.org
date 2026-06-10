@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   keywords: "betting sites, UK betting, World Cup 2026, free bets, bookmakers, sports betting",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/logo.png", type: "image/png" },
     ],
   },
   openGraph: {
