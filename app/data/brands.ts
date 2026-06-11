@@ -41,16 +41,16 @@ const rawBrands = [
     isMobile: true,
     votes: 1105,
   },
-  {
-    id: "gladiatorsbet",
-    name: "GladiatorsBet",
-    logo: "/logos/GladiatorsBet.svg",
-    rating: 9.2,
-    bonus: "WELCOME SPORTS FREEBET UP TO £100 FREEBET",
-    url: "https://go.froggypartners.com/visit/?bta=36012&nci=7052&afp1=GladiatrosBet-GA02&afp=",
-    isMobile: true,
-    votes: 1340,
-  },
+  // {
+  //   id: "gladiatorsbet",
+  //   name: "GladiatorsBet",
+  //   logo: "/logos/GladiatorsBet.svg",
+  //   rating: 9.2,
+  //   bonus: "WELCOME SPORTS FREEBET UP TO £100 FREEBET",
+  //   url: "https://go.froggypartners.com/visit/?bta=36012&nci=7052&afp1=GladiatrosBet-GA02&afp=",
+  //   isMobile: true,
+  //   votes: 1340,
+  // },
   
   {
     id: "bananzia",
