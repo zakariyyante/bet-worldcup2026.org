@@ -102,23 +102,23 @@ export default function BrandCard({ brand, rank, gclidValue }: BrandCardProps) {
       {/* Card body */}
       <div className="p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center relative z-10">
         {/* LEFT: Logo + Rating */}
-        <div className="flex flex-col items-center gap-3 min-w-[140px]">
-          <div className="relative w-32 h-16 rounded-2xl overflow-hidden flex items-center justify-center p-2">
+        <div className="flex flex-col items-center gap-4 min-w-[180px]">
+          <div className="relative w-40 h-24 rounded-2xl overflow-hidden flex items-center justify-center p-2">
             <Image
               src={brand.logo}
               alt={`${brand.name} logo`}
               fill
               className="object-contain p-2"
-              sizes="128px"
+              sizes="160px"
             />
           </div>
           <div className="flex flex-col items-center">
             <div className="flex items-center gap-1.5">
-              <span className="text-2xl font-black green-text">{brand.rating}</span>
-              <span className="text-slate-500 text-xs font-bold">/10</span>
+              <span className="text-3xl font-black green-text">{brand.rating}</span>
+              <span className="text-slate-500 text-sm font-bold">/10</span>
             </div>
             <StarRating rating={brand.rating} />
-            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-1">{brand.votes.toLocaleString()} reviews</div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1">{brand.votes.toLocaleString()} reviews</div>
           </div>
         </div>
 
@@ -128,7 +128,7 @@ export default function BrandCard({ brand, rank, gclidValue }: BrandCardProps) {
             <div className="inline-block px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest bg-green-500/10 text-green-400 border border-green-500/20 mb-2">
               Exclusive Welcome Offer
             </div>
-            <div className="text-2xl font-black text-white leading-tight tracking-tight">
+            <div className="text-2xl font-black green-text leading-tight tracking-tight">
               {brand.bonus}
             </div>
           </div>

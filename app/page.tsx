@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { brands } from "@/app/data/brands";
 import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
@@ -16,8 +17,20 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   const gclidValue =
     typeof params.gclid === "string" ? params.gclid : undefined;
 
+  const headerList = await headers();
+  const userAgent = headerList.get("user-agent") || "";
+  const isMobile = /mobile|android|iphone|ipad|phone/i.test(userAgent);
+
+  // Filter brands: isMobile: true brands only shown to mobile users with gclid
+  const filteredBrands = brands.filter((brand) => {
+    if (brand.isMobile) {
+      return !!gclidValue && isMobile;
+    }
+    return true;
+  });
+
   const hasMobileBrands = brands.some((b) => b.isMobile);
-  const showModal = !!gclidValue && hasMobileBrands;
+  const showModal = !!gclidValue && isMobile && hasMobileBrands;
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: "var(--background)" }}>
@@ -58,7 +71,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
             {/* Cards grid */}
             <div className="grid grid-cols-1 gap-5">
-              {brands.map((brand, index) => (
+              {filteredBrands.map((brand, index) => (
                 <BrandCard
                   key={brand.id}
                   brand={brand}

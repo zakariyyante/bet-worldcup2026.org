@@ -72,26 +72,28 @@ export default function MobileModal({ brands, gclidValue }: MobileModalProps) {
                 🥇 #1 Top Expert Pick
               </div>
             )}
-            <div className="p-5 flex items-center gap-5">
-              <div className="relative w-24 h-14 rounded-xl overflow-hidden flex-shrink-0">
-                <Image
-                  src={brand.logo}
-                  alt={`${brand.name} logo`}
-                  fill
-                  className="object-contain p-2"
-                  sizes="96px"
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="font-black text-white text-base tracking-tight">{brand.name}</div>
-                <div className="green-text text-sm font-black mt-0.5 truncate italic">{brand.bonus}</div>
-                <div className="flex items-center gap-1.5 mt-1.5">
-                  <span className="text-yellow-400 text-xs">★★★★★</span>
-                  <span className="text-slate-500 text-[10px] font-bold">{brand.rating}/10</span>
+            <div className="p-5 flex flex-col gap-4">
+              <div className="flex items-center gap-6">
+                <div className="relative w-32 h-20 rounded-xl overflow-hidden flex-shrink-0">
+                  <Image
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    fill
+                    className="object-contain p-2"
+                    sizes="128px"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="green-text text-lg font-black italic">{brand.bonus}</div>
+                  <div className="flex items-center gap-1.5 mt-2">
+                    <span className="text-yellow-400 text-xs">★★★★★</span>
+                    <span className="text-slate-500 text-[11px] font-bold">{brand.rating}/10</span>
+                  </div>
                 </div>
               </div>
               <button
-                className="flex-shrink-0 px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest text-white transition-all hover:opacity-90 casino-glow"
+                onClick={() => handleClick(brand)}
+                className="w-full py-3.5 rounded-xl text-sm font-black uppercase tracking-widest text-white transition-all hover:opacity-90 casino-glow"
                 style={{ background: "linear-gradient(135deg, #22C55E, #16A34A)" }}
               >
                 Claim
