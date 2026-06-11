@@ -12,6 +12,26 @@ export interface Brand {
 
 const rawBrands = [
   {
+    id: "vegashero",
+    name: "VegasHero",
+    logo: "/logos/VegasHero.png",
+    rating: 9.0,
+    bonus: "SPORTS WORLD CUP WELCOME BONUS 150% UP TO €300",
+    url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-GA02&clickid=",
+    isMobile: true,
+    votes: 1105,
+  },
+  {
+    id: "betnjet",
+    name: "BetNJet",
+    logo: "/logos/betnjet.svg",
+    rating: 9.0,
+    bonus: "SPORT Welcome Bonus: 180% up to £1700",
+    url: "https://gtrfk.com/jb61ar0ve?subid=BetNJet-GA02&visit_id=",
+    isMobile: true,
+    votes: 1105,
+  },
+  {
     id: "tenobet",
     name: "TenoBet",
     logo: "/logos/TenoBet.svg",
@@ -31,16 +51,7 @@ const rawBrands = [
     isMobile: true,
     votes: 1340,
   },
-  {
-    id: "betnjet",
-    name: "BetNJet",
-    logo: "/logos/betnjet.svg",
-    rating: 9.0,
-    bonus: "SPORT Welcome Bonus: 180% up to £1700",
-    url: "https://gtrfk.com/jb61ar0ve?subid=BetNJet-GA02&visit_id=",
-    isMobile: true,
-    votes: 1105,
-  },
+  
   {
     id: "bananzia",
     name: "Bananzia",
