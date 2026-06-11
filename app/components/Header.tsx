@@ -12,7 +12,11 @@ const navLinks = [
   { label: "Contact Us", href: "/contact" },
 ];
 
-export default function Header() {
+interface HeaderProps {
+  isMobileTrue?: boolean;
+}
+
+export default function Header({ isMobileTrue }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -23,9 +27,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
-              src="/logo.png"
+              src={isMobileTrue ? "/worldcup.png" : "/logo.png"}
               alt="bet-worldcup2026.org"
-              width={240}
+              width={isMobileTrue ? 180 : 240}
               height={60}
               priority
               className="h-12 w-auto"

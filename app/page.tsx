@@ -38,7 +38,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         <MobileModal brands={brands} gclidValue={gclidValue!} />
       )}
 
-      <Header />
+      <Header isMobileTrue={showModal} />
 
       <main className="flex-1">
         <Hero />

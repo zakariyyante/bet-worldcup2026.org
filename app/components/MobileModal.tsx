@@ -35,8 +35,18 @@ export default function MobileModal({ brands, gclidValue }: MobileModalProps) {
   return (
     <div className="fixed inset-0 z-[100] flex flex-col overflow-y-auto"
       style={{ background: "rgba(5,11,24,0.98)", backdropFilter: "blur(12px)" }}>
-      {/* Close button */}
-      <div className="flex justify-end p-5">
+      {/* Header with Worldcup Logo */}
+      <div className="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8 border-b border-blue-900/40">
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <Image
+            src="/worldcup.png"
+            alt="World Cup 2026"
+            width={180}
+            height={60}
+            priority
+            className="h-12 w-auto"
+          />
+        </div>
         <button
           onClick={() => setIsOpen(false)}
           className="p-2.5 rounded-full text-slate-400 hover:text-white hover:bg-blue-900/40 transition-all duration-200"
