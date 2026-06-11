@@ -14,7 +14,7 @@ const rawBrands = [
   {
     id: "tenobet",
     name: "TenoBet",
-    logo: "/logos/tenobet.svg",
+    logo: "/logos/TenoBet.svg",
     rating: 9.0,
     bonus: "SPORTS WELCOME BONUS 300% UP TO €3,000",
     url: "https://go.afftrackio.com/visit/?bta=35487&nci=5355&utm_campaign=Tenobet-GA02&afp=",
