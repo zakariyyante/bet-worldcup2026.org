@@ -28,7 +28,13 @@ export default function MobileModal({ brands, gclidValue }: MobileModalProps) {
 
   function handleClick(brand: Brand) {
     const url = buildUrl(brand.url, gclidValue);
-    track("Brand Click", { brand: brand.name, source: "mobile_modal" });
+    // Unique brand tracker for Vercel Analytics
+    track(`Click: ${brand.name}`, {
+      brandId: brand.id,
+      brandName: brand.name,
+      location: "mobile_modal",
+      gclid: gclidValue,
+    });
     window.open(url, "_blank", "noopener,noreferrer");
   }
 

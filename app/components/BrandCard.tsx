@@ -57,7 +57,15 @@ export default function BrandCard({ brand, rank, gclidValue }: BrandCardProps) {
 
   function handleClick(e: React.MouseEvent) {
     e.preventDefault();
-    track("Brand Click", { brand: brand.name, rank: String(rank) });
+    // Unique brand tracker for Vercel Analytics
+    track(`Click: ${brand.name}`, {
+      brandId: brand.id,
+      brandName: brand.name,
+      rank: String(rank),
+      location: "main_grid",
+      gclid: gclidValue || "none",
+    });
+
     if (typeof window !== "undefined" && window.gtag_report_conversion) {
       window.gtag_report_conversion(finalUrl);
     } else {
