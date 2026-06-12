@@ -86,16 +86,16 @@ const rawBrands = [
   //   votes: 1340,
   // },
   
-  {
-    id: "bananzia",
-    name: "Bananzia",
-    logo: "/logos/bananzia.svg",
-    rating: 9.2,
-    bonus: "Casino Welcome Bonus 300% up to £200 + 50 FS!",
-    url: "https://bestcpa.online/click?o=510&a=75&aff_click_id=GA02",
-    isMobile: true,
-    votes: 1340,
-  },
+  // {
+  //   id: "bananzia",
+  //   name: "Bananzia",
+  //   logo: "/logos/bananzia.svg",
+  //   rating: 9.2,
+  //   bonus: "Casino Welcome Bonus 300% up to £200 + 50 FS!",
+  //   url: "https://bestcpa.online/click?o=510&a=75&aff_click_id=GA02",
+  //   isMobile: true,
+  //   votes: 1340,
+  // },
   {
     id: "grosvenor-casinos",
     name: "Grosvenor",
