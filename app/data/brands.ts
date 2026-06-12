@@ -42,16 +42,16 @@ const rawBrands = [
     isMobile: true,
     votes: 1340,
   },
-  {
-    id: "rollyspin",
-    name: "RollySpin",
-    logo: "/logos/RollySpin.svg",
-    rating: 9.2,
-    bonus: "255% Up To 4500 £ + 255 FS",
-    url: "https://bestcpa.online/click?o=469&a=75&aff_click_id=GA02",
-    isMobile: true,
-    votes: 1340,
-  },
+  // {
+  //   id: "rollyspin",
+  //   name: "RollySpin",
+  //   logo: "/logos/RollySpin.svg",
+  //   rating: 9.2,
+  //   bonus: "255% Up To 4500 £ + 255 FS",
+  //   url: "https://bestcpa.online/click?o=469&a=75&aff_click_id=GA02",
+  //   isMobile: true,
+  //   votes: 1340,
+  // },
   
   
   
