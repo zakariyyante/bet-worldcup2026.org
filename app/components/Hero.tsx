@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Hero() {
+interface HeroProps {
+  isMobileTrue?: boolean;
+}
+
+export default function Hero({ isMobileTrue }: HeroProps) {
   const year = 2026;
 
   return (
@@ -15,24 +19,34 @@ export default function Hero() {
         {/* Badge pill */}
         <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full text-xs font-black uppercase tracking-[0.2em] border"
           style={{ background: "rgba(34,197,94,0.1)", borderColor: "rgba(34,197,94,0.3)", color: "#4ADE80" }}>
-          <span className="animate-pulse">⚽</span>
-          <span>UK&apos;s Elite Betting Hub {year}</span>
-          <span className="animate-pulse">⚽</span>
+          <span className="animate-pulse">{isMobileTrue ? "🎰" : "⚽"}</span>
+          <span>{isMobileTrue ? "UK's Best Instant Casinos" : `UK's Elite Betting Hub ${year}`}</span>
+          <span className="animate-pulse">{isMobileTrue ? "🎰" : "⚽"}</span>
         </div>
 
         {/* H1 */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 tracking-tight">
-          <span className="text-white">Find the UK&apos;s Best</span>{" "}
+          <span className="text-white">{isMobileTrue ? "New Instant" : "Find the UK's Best"}</span>{" "}
           <br />
-          <span className="green-text italic">World Cup</span>{" "}
-          <span className="gold-text">Sites</span>
+          <span className="green-text italic">{isMobileTrue ? "Casinos" : "World Cup"}</span>{" "}
+          {!isMobileTrue && <span className="gold-text">Sites</span>}
         </h1>
 
         {/* Subtitle */}
         <p className="mt-6 max-w-3xl mx-auto text-xl text-slate-300 leading-relaxed font-medium">
-          Expert-reviewed bookmakers with{" "}
-          <span className="text-green-400 font-bold">exclusive 2026 bonuses</span>,
-          rapid payouts, and verified UKGC licences.
+          {isMobileTrue ? (
+            <>
+              Expert-reviewed casinos with{" "}
+              <span className="text-green-400 font-bold">instant payouts</span>,
+              exclusive bonuses, and verified UKGC licences.
+            </>
+          ) : (
+            <>
+              Expert-reviewed bookmakers with{" "}
+              <span className="text-green-400 font-bold">exclusive 2026 bonuses</span>,
+              rapid payouts, and verified UKGC licences.
+            </>
+          )}
         </p>
 
         {/* Trust Badges */}

@@ -46,7 +46,7 @@ export default function MobileModal({ brands, gclidValue }: MobileModalProps) {
         <div className="flex items-center gap-2 flex-shrink-0">
           <Image
             src="/worldcup.png"
-            alt="World Cup 2026"
+            alt="New Instant Casinos"
             width={180}
             height={60}
             priority
@@ -68,10 +68,10 @@ export default function MobileModal({ brands, gclidValue }: MobileModalProps) {
       <div className="text-center px-6 pb-8">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 rounded-full text-[10px] font-black uppercase tracking-[0.2em]"
           style={{ background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.3)", color: "#4ADE80" }}>
-          ⚽ Exclusive Mobile Offers
+          🎰 Exclusive Casino Offers
         </div>
-        <h2 className="text-3xl font-black text-white tracking-tight">World Cup 2026</h2>
-        <p className="green-text font-black text-xl italic mt-1">Best Betting Bonuses</p>
+        <h2 className="text-3xl font-black text-white tracking-tight">New Instant Casinos</h2>
+        <p className="green-text font-black text-xl italic mt-1">Best Casino Bonuses</p>
         <p className="text-slate-400 text-sm mt-3 font-medium">Claim your exclusive welcome offer now</p>
       </div>
 

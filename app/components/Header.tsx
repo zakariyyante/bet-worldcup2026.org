@@ -28,7 +28,7 @@ export default function Header({ isMobileTrue }: HeaderProps) {
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
               src={isMobileTrue ? "/worldcup.png" : "/logo.png"}
-              alt="bet-worldcup2026.org"
+              alt={isMobileTrue ? "New Instant Casinos" : "bet-worldcup2026.org"}
               width={isMobileTrue ? 180 : 240}
               height={60}
               priority

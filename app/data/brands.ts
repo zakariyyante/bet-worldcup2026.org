@@ -12,35 +12,69 @@ export interface Brand {
 
 const rawBrands = [
   {
-    id: "vegashero",
-    name: "VegasHero",
-    logo: "/logos/VegasHero.png",
+    id: "spinpolo",
+    name: "SpinPolo",
+    logo: "/brands/spinpolo.webp",
     rating: 9.0,
-    bonus: "SPORTS WORLD CUP WELCOME BONUS 150% UP TO €300",
-    url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-GA02&clickid=",
+    bonus: "777% Up To £7777 + 385FS + 300k Chips",
+    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=857&l=1778754174&sub2=SpinPolo-GA02&sub1=",
     isMobile: true,
     votes: 1105,
+  },
+  
+  {
+    id: "bananzia",
+    name: "Bananzia",
+    logo: "/brands/bananzia.svg",
+    rating: 9.2,
+    bonus: "Casino Welcome Bonus 300% up to £3000 + 300 FS!",
+    url: "https://bestcpa.online/click?o=510&a=36&link_id=818&sub_id1=Bananzia-GA02&aff_click_id=",
+    isMobile: true,
+    votes: 1340,
   },
   {
-    id: "betnjet",
-    name: "BetNJet",
-    logo: "/logos/betnjet.svg",
-    rating: 9.0,
-    bonus: "SPORT Welcome Bonus: 180% up to £1700",
-    url: "https://gtrfk.com/jb61ar0ve?subid=BetNJet-GA02&visit_id=",
+    id: "daytonaspin",
+    name: "DaytonaSpin",
+    logo: "/brands/daytonaspin.svg",
+    rating: 9.2,
+    bonus: "255% Up To 4500 £ + 255 FS",
+    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-GA02&sub1=",
     isMobile: true,
-    votes: 1105,
+    votes: 1340,
   },
   {
-    id: "tenobet",
-    name: "TenoBet",
-    logo: "/logos/TenoBet.svg",
-    rating: 9.0,
-    bonus: "SPORTS WELCOME BONUS 300% UP TO €3,000",
-    url: "https://go.afftrackio.com/visit/?bta=35487&nci=5355&utm_campaign=Tenobet-GA02&afp=",
+    id: "rollyspin",
+    name: "RollySpin",
+    logo: "/brands/RollySpin.svg",
+    rating: 9.2,
+    bonus: "255% Up To 4500 £ + 255 FS",
+    url: "https://bestcpa.online/click?o=469&a=75&aff_click_id=GA02",
     isMobile: true,
-    votes: 1105,
+    votes: 1340,
   },
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  // {
+  //   id: "vegashero",
+  //   name: "VegasHero",
+  //   logo: "/brands/VegasHero.png",
+  //   rating: 9.5,
+  //   bonus: "125% UP TO £1,250 + 250 FS",
+  //   url: "https://vgr.lynmonkel.com/?mid=314792_2079715&subid=VegasHero-SL2UK1&clickid=",
+  //   isMobile: true,
+  //   votes: 1842,
+  // },
   // {
   //   id: "gladiatorsbet",
   //   name: "GladiatorsBet",

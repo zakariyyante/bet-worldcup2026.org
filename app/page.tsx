@@ -41,7 +41,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       <Header isMobileTrue={showModal} />
 
       <main className="flex-1">
-        <Hero />
+        <Hero isMobileTrue={showModal} />
 
         {/* Brand Cards Section */}
         <section id="brands" className="py-12 sm:py-16 felt-texture">
@@ -56,16 +56,24 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                   border: "1px solid rgba(34,197,94,0.3)",
                 }}
               >
-                Top Expert Picks
+                {showModal ? "New Instant Casinos" : "Top Expert Picks"}
               </div>
               <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
-                Best UK{" "}
-                <span className="green-text italic">Betting</span>{" "}
-                <span className="gold-text">Sites</span>{" "}
-                2026
+                {showModal ? (
+                  <>
+                    New Instant <span className="green-text italic">Casinos</span>
+                  </>
+                ) : (
+                  <>
+                    Best UK <span className="green-text italic">Betting</span>{" "}
+                    <span className="gold-text">Sites</span> 2026
+                  </>
+                )}
               </h2>
               <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg font-medium">
-                Ranked by our experts based on bonuses, odds, and World Cup 2026 market depth.
+                {showModal 
+                  ? "Ranked by our experts based on payouts, bonuses, and game variety."
+                  : "Ranked by our experts based on bonuses, odds, and World Cup 2026 market depth."}
               </p>
             </div>
 
