@@ -39,7 +39,7 @@ const rawBrands = [
     logo: "/logos/daytonaspin.svg",
     rating: 9.5,
     bonus: "255% Up To 4500 £ + 255 FS",
-    url: "https://direct.reradirectbox.com/click?pid=75&offer_id=345&l=1774277506&sub2=DaytonaSpin-GA02&sub1=",
+    url: "https://bestcpa.online/click?o=380&a=75&sub_id1=DaytonaSpin-GA02&aff_click_id=",
     isMobile: true,
     votes: 1340,
   },
